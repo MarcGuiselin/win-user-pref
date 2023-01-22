@@ -93,7 +93,7 @@ impl UserPref {
             // Push registry write time
             if self.is_win_10 {
                 input.push_str(&get_registry_last_write_time(&default_browser_key)?);
-                input.push_str(env!("USER_PREF_SECRET"));
+                input.push_str("User Choice set via Windows User Experience {D18B6DD5-6124-4341-9318-804003BAFA0B}");
             }
 
             // Set hash
